@@ -119,6 +119,35 @@ const gameBoardStyles = StyleSheet.create({
 		width: "100%",
 		height: "100%",
 	},
+	selectLevelButtonContainer: {
+		alignItems: "center", // Center the button horizontally
+		paddingTop: "5%", // Add padding to avoid status bar (adjust as needed)
+		paddingBottom: 10, // Add some padding at the bottom as well
+		backgroundColor: "#f8f9fa", // Optional: background color for button area
+	},
+	selectLevelButton: {
+		backgroundColor: "#4F4F4F", // Blue background
+		paddingVertical: 15, // Increase vertical padding for a bigger button
+		paddingHorizontal: 25, // Increase horizontal padding
+		borderRadius: 10, // Make the corners more rounded
+		elevation: 3, // Add some shadow on Android
+		shadowColor: "#000", // Shadow color for iOS
+		shadowOffset: { width: 0, height: 2 }, // Shadow position for iOS
+		shadowOpacity: 0.25, // Shadow opacity for iOS
+		shadowRadius: 3.84, // Shadow blur radius for iOS
+	},
+	selectLevelButtonText: {
+		color: "#fff", // White text color
+		fontSize: 18, // Increase font size
+		fontWeight: "600", // Make text bold
+		textAlign: "center", // Center text within the button
+	},
+	footer: {
+		marginVertical: 20,
+		width: "100%",
+		alignItems: "center", // Center the content horizontally
+		paddingBottom: 10, // Add padding to ensure there's space below the button
+	},
 });
 
 export default gameBoardStyles;

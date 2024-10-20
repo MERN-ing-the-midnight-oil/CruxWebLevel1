@@ -340,7 +340,7 @@ const GameBoard = () => {
 					style={{
 						justifyContent: "center",
 						alignItems: "center",
-						backgroundColor: "orange", // Set the background color to orange for testing
+						backgroundColor: "transparent", // Set the background color to orange for testing
 						padding: 20,
 					}}>
 					<Button
@@ -352,6 +352,30 @@ const GameBoard = () => {
 
 			{currentLevel && (
 				<KeyboardAwareFlatList
+					ListHeaderComponent={
+						<View>
+							{/* Top "Select Level" Button */}
+							<View style={styles.selectLevelButtonContainer}>
+								<TouchableOpacity
+									style={styles.selectLevelButton}
+									onPress={() => setShowPickerModal(true)}>
+									<Text style={styles.selectLevelButtonText}>Select Level</Text>
+								</TouchableOpacity>
+							</View>
+
+							{/* Level Title and Subtitle */}
+							<View style={styles.header}>
+								<Text style={styles.levelTitle}>
+									{levels[currentLevel]?.title || "Level Title"}
+								</Text>
+								{levels[currentLevel]?.secondaryTitle && (
+									<Text style={styles.secondaryTitle}>
+										{levels[currentLevel].secondaryTitle}
+									</Text>
+								)}
+							</View>
+						</View>
+					}
 					data={levels[currentLevel]?.grid || []}
 					renderItem={({ item: row, index: rowIndex }) => (
 						<View
@@ -369,7 +393,12 @@ const GameBoard = () => {
 						setGameContainerWidth(width);
 					}}
 					ListFooterComponent={() => (
-						<View style={[styles.footer, !currentLevel && styles.hidden]}>
+						<View style={styles.footer}>
+							<TouchableOpacity
+								style={styles.selectLevelButton}
+								onPress={() => setShowPickerModal(true)}>
+								<Text style={styles.selectLevelButtonText}>Select Level</Text>
+							</TouchableOpacity>
 							<Button
 								title="Erase All and Start Over"
 								onPress={clearGuesses}
@@ -387,7 +416,6 @@ const GameBoard = () => {
 					onRequestClose={() => setShowPickerModal(false)}>
 					<View style={styles.pickerModal}>
 						<View style={styles.pickerWrapper}>
-							<Text style={styles.pickerTitle}>Select Your Puzzle</Text>
 							<View style={styles.pickerContainer}>
 								<Picker
 									selectedValue={currentLevel}
@@ -398,12 +426,12 @@ const GameBoard = () => {
 									}}
 									style={styles.picker}>
 									<Picker.Item
-										label="Select Puzzle"
+										label="Please choose a level:"
 										value=""
 										color="#999"
 									/>
 									<Picker.Item
-										label="Easy Level"
+										label="Getting Started"
 										value="easylevel"
 									/>
 									<Picker.Item

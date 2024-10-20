@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Alpha Crux",
-    "slug": "your-app-slug",
-    "version": "1.1.0",
+    "slug": "alpha-crux",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/images/crux_icon.png",
     "scheme": "cruxmobile",
@@ -37,6 +37,7 @@
         "projectId": "1f1d875f-1fee-44b0-8a49-932a504e2a8f"
       }
     },
-    "owner": "rhyssmoker"
+    "owner": "rhyssmoker",
+    "platforms": ["ios", "android", "web"]
   }
 }
