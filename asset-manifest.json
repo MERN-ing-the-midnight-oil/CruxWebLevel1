@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CRUX-2.0/static/css/main.90597ec3.css",
+    "main.js": "/CRUX-2.0/static/js/main.20b61d9a.js",
+    "static/js/453.8627f0dd.chunk.js": "/CRUX-2.0/static/js/453.8627f0dd.chunk.js",
+    "index.html": "/CRUX-2.0/index.html",
+    "main.90597ec3.css.map": "/CRUX-2.0/static/css/main.90597ec3.css.map",
+    "main.20b61d9a.js.map": "/CRUX-2.0/static/js/main.20b61d9a.js.map",
+    "453.8627f0dd.chunk.js.map": "/CRUX-2.0/static/js/453.8627f0dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90597ec3.css",
+    "static/js/main.20b61d9a.js"
+  ]
+}

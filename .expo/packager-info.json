@@ -1,0 +1,8 @@
+{
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://cq-wg9.anonymous.cruxmobile.exp.direct",
+  "packagerNgrokUrl": "https://cq-wg9.anonymous.cruxmobile.exp.direct",
+  "ngrokPid": 18150,
+  "devToolsPort": 19002
+}
